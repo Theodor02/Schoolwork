@@ -1,0 +1,13 @@
+@startuml
+
+title scenario2
+
+participant Lager as lager1
+participant Fabrik as fabrik1
+
+
+
+
+
+
+@enduml

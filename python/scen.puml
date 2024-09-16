@@ -1,0 +1,10 @@
+@startuml
+title Scenario 1
+participant main as main1
+participant barack1 as Barack1
+participant barack2 as Barack2
+Worker1 -> Barack1: addWorker()
+
+main1 -> Barack1: addWorker(Worker1)
+
+@enduml

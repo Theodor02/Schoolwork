@@ -1,0 +1,114 @@
+'https://plantuml.com/class-diagram'
+@startuml
+
+
+    class Resource {
+        - _amount: list
+    }
+
+    class Workers {
+        - _health: int
+    }
+
+    class Food {
+        - _quality: int
+    }
+
+    class Product {
+
+    }
+
+    class Place {
+        + addBarn():
+        + addBarack():
+        + addWarehouse():
+    }
+
+    class Barn {
+        - _queue: List<Food>
+        + addFood(food: Food): void
+        + removeFood(): Mat
+        + showAmountFood(): int
+    }
+
+    class Barack {
+        - _queue: List<Worker>
+        + addWorker(worker: Worker): void
+        + removeWorker(): Worker
+        + showAllWorkers(): int
+    }
+
+    class Warehouse {
+        - _stack: Stack<Product>
+        + addProduct(product: Product): void
+        + removeProduct(): Produkt
+        + showStack(): stack
+    }
+
+
+
+class Transition {
+    + addFactory():
+    + addField():
+    + addLunchroom():
+    + addHome():
+}
+
+class Factories {
+    - _barack: <Barack>
+    - _barack2: <Barack>S
+    - _warehouse: <Warehouse>
+    + _hurtWorker(): int
+    + _accident(): void
+    + createProduct(): <Product>
+    }
+
+class Fields {
+    - _barn: <Barn>
+    - _barack: <barack>
+    - _barack2: <Barack>
+    + _accident():
+    + createFood(): <Food>
+    }
+
+class Lunchroom {
+    - _barack: <Barack>
+    - _barack2: <Barack>
+    - _barn: <Barn>
+    + eat(): int
+    }
+    
+class Home {
+    - _barack: <Barack>
+    - _barack2: <Barack>
+    - _warehouse: <Warehouse>
+    + _decision(): void
+    + _sleep(): int
+    + _reproduce(): Worker
+    + goHome(): void
+
+}
+
+
+
+Barack --o Factories
+Barack --o Fields
+Barack --o Lunchroom
+Barack --o Home
+
+Barn --o Lunchroom
+Barn o-- Fields
+
+Warehouse o-- Factories
+Warehouse --o Home
+
+Factories o-- Product
+Fields o-- Food
+Workers --o Home
+Workers --o Barack
+
+
+
+
+
+@enduml
